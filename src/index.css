@@ -1,13 +1,122 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Happy+Monkey:regular,b");
+
+/* --Global styling-- */
+/* Setting no margin or padding */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* background color and text defaults */
+body {
+  background-color: #f3d9fa;
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* no bullets */
+ul {
+  list-style-type: none;
+}
+
+/* sets pics max of container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --Utility classes-- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* specifics */
+/* navbar */
+.navbar {
+  background: #bb9dc5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Gallery container styling */
+.gallery {
+  color: #862e9c;
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+/* Right column */
+.userContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.userInfo {
+  border: 4px solid #bb9dc5; /* Softer border color */
+  border-radius: 15px; /* Rounded corners */
+  padding: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* aka left column Posts container styling */
+.posts {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
+
+/* Individual posts styling */
+.post {
+  /* flex: 0 1 calc(25% - 20px); Flex grow, flex shrink, basis */
+  /* background-color: #d28ba4; */
+  background-color: #f3d9fa;
+  color: #2f2a30;
+  border: 4px solid #bb9dc5; /* Softer border color */
+  border-radius: 15px; /* Rounded corners */
+  padding: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.postBodyContainer {
+  display: flex;
+
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.post h3 {
+  font-family: "Happy Monkey";
+  color: #9c36b5;
+  font-size: 1.5em;
+}
+
+.crochetImage {
+  max-width: 120px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Increased padding */
+  margin-top: 30px;
 }
